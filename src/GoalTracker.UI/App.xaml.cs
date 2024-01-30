@@ -1,22 +1,14 @@
-﻿using System.Windows;
-using GoalTracker.Application.Abstractions;
-using GoalTracker.Persistence.Implementation;
-using GoalTracker.UI.Views;
-using Prism.Ioc;
+﻿namespace GoalTracker.UI;
 
-namespace GoalTracker.UI;
-
-public partial class App
+public partial class App : Application
 {
-    protected override void RegisterTypes(IContainerRegistry containerRegistry)
+    public App()
     {
-        containerRegistry.RegisterSingleton<IGoalService, CsvGoalService>();
-        
-        containerRegistry.RegisterForNavigation<MainView>();
-    }
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
+            "MzA3MzY0MUAzMjM0MmUzMDJlMzBLQWRqckRzRzE4Y0xiZFdCSXN3dHBxTS8zVU82ejFDdzJ3SmlSdk9yU2ZjPQ==");
 
-    protected override Window CreateShell()
-    {
-        return Container.Resolve<MainWindow>();
+        InitializeComponent();
+
+        MainPage = new AppShell();
     }
 }
