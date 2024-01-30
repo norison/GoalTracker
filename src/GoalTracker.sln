@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBudget.UI", "SimpleBudget.UI\SimpleBudget.UI.csproj", "{116B4A77-3197-4113-A6BB-E758A9375DBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalTracker.UI", "GoalTracker.UI\GoalTracker.UI.csproj", "{116B4A77-3197-4113-A6BB-E758A9375DBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBudget.Application", "SimpleBudget.Application\SimpleBudget.Application.csproj", "{CA4F0211-6270-40D1-A56A-36DF54B45B58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalTracker.Application", "GoalTracker.Application\GoalTracker.Application.csproj", "{CA4F0211-6270-40D1-A56A-36DF54B45B58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBudget.Persistence", "SimpleBudget.Persistence\SimpleBudget.Persistence.csproj", "{1588F347-2659-4300-B925-5F67AA5F3281}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalTracker.Persistence", "GoalTracker.Persistence\GoalTracker.Persistence.csproj", "{1588F347-2659-4300-B925-5F67AA5F3281}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
