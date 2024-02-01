@@ -40,28 +40,55 @@
 
     <ItemGroup>
         <!-- App Icon -->
-        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4"/>
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
         <!-- Splash Screen -->
-        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128"/>
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
         <!-- Images -->
-        <MauiImage Include="Resources\Images\*"/>
-        <MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185"/>
+        <MauiImage Include="Resources\Images\*" />
+        <MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 
         <!-- Custom Fonts -->
-        <MauiFont Include="Resources\Fonts\*"/>
+        <MauiFont Include="Resources\Fonts\*" />
 
         <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)"/>
+        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-        <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
-        <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)"/>
-        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0"/>
+        <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+        <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
         <PackageReference Include="Syncfusion.Maui.Buttons" Version="24.1.47" />
+        <PackageReference Include="Syncfusion.Maui.TabView" Version="24.1.47" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GoalTracker.Application\GoalTracker.Application.csproj" />
+      <ProjectReference Include="..\GoalTracker.Persistence\GoalTracker.Persistence.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiXaml Update="Pages\Desktop\DesktopShell.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Pages\Mobile\MobileShell.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Pages\Desktop\DesktopShell.xaml.cs">
+        <DependentUpon>AppShell.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Pages\Mobile\MobileShell.xaml.cs">
+        <DependentUpon>AppShell.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>

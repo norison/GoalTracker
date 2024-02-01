@@ -1,6 +1,10 @@
-﻿namespace GoalTracker.UI;
+﻿using GoalTracker.UI.Pages.Desktop;
+using GoalTracker.UI.Pages.Mobile;
+using Shell = Microsoft.Maui.Controls.Shell;
 
-public partial class App : Application
+namespace GoalTracker.UI;
+
+public partial class App
 {
     public App()
     {
@@ -9,6 +13,33 @@ public partial class App : Application
 
         InitializeComponent();
 
-        MainPage = new AppShell();
+        MainPage = Config.IsDesktop ? new DesktopShell() : new MobileShell();
+    }
+
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        var window = base.CreateWindow(activationState);
+
+        if (!Config.IsDesktop)
+        {
+            return window;
+        }
+
+        window.MinimumWidth = 1080;
+        window.MinimumHeight = 500;
+
+        window.SizeChanged += Window_SizeChanged;
+
+        return window;
+    }
+
+    private static void Window_SizeChanged(object? sender, EventArgs e)
+    {
+        if (sender is not Window window)
+        {
+            return;
+        }
+
+        Shell.Current.FlyoutBehavior = window.Width < 1200 ? FlyoutBehavior.Flyout : FlyoutBehavior.Locked;
     }
 }

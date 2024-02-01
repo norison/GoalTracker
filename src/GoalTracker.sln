@@ -1,10 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalTracker.Application", "GoalTracker.Application\GoalTracker.Application.csproj", "{CA4F0211-6270-40D1-A56A-36DF54B45B58}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoalTracker.Application", "GoalTracker.Application\GoalTracker.Application.csproj", "{CA4F0211-6270-40D1-A56A-36DF54B45B58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalTracker.Persistence", "GoalTracker.Persistence\GoalTracker.Persistence.csproj", "{1588F347-2659-4300-B925-5F67AA5F3281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoalTracker.Persistence", "GoalTracker.Persistence\GoalTracker.Persistence.csproj", "{1588F347-2659-4300-B925-5F67AA5F3281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalTracker.UI", "GoalTracker.UI\GoalTracker.UI.csproj", "{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoalTracker.UI", "GoalTracker.UI\GoalTracker.UI.csproj", "{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,7 +25,11 @@ Global
 		{1588F347-2659-4300-B925-5F67AA5F3281}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
