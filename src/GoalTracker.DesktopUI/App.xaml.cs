@@ -20,7 +20,7 @@ public partial class App
         containerRegistry.RegisterSingleton<IThemeService, ThemeService>();
 
         // Pages
-        containerRegistry.RegisterForNavigation<MainContentView>();
+        containerRegistry.RegisterForNavigation<MainContentView, MainContentViewModel>(PageNames.MainContent);
         containerRegistry.RegisterForNavigation<DashboardView, DashboardViewModel>(PageNames.Dashboard);
         containerRegistry.RegisterForNavigation<GoalsView, GoalsViewModel>(PageNames.Goals);
         containerRegistry.RegisterForNavigation<TrackerView, TrackerViewModel>(PageNames.Tracker);

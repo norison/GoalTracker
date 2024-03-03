@@ -4,7 +4,6 @@ using CommunityToolkit.Mvvm.Input;
 using GoalTracker.DesktopUI.Constants;
 using GoalTracker.DesktopUI.Enums;
 using GoalTracker.DesktopUI.Services.Themes;
-using GoalTracker.DesktopUI.Views;
 using Prism.Regions;
 
 namespace GoalTracker.DesktopUI.ViewModels;
@@ -19,7 +18,7 @@ public partial class MainViewModel : ObservableObject
     {
         _themeService = themeService;
 
-        regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(MainContentView));
+        regionManager.RegisterViewWithRegion(RegionNames.MainRegion, PageNames.MainContent);
     }
 
     [RelayCommand]
