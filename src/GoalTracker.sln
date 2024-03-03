@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoalTracker.Application", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoalTracker.Persistence", "GoalTracker.Persistence\GoalTracker.Persistence.csproj", "{1588F347-2659-4300-B925-5F67AA5F3281}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoalTracker.UI", "GoalTracker.UI\GoalTracker.UI.csproj", "{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalTracker.DesktopUI", "GoalTracker.DesktopUI\GoalTracker.DesktopUI.csproj", "{C72B9C00-9562-4652-B912-D87D19A8934D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,11 +23,10 @@ Global
 		{1588F347-2659-4300-B925-5F67AA5F3281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1588F347-2659-4300-B925-5F67AA5F3281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1588F347-2659-4300-B925-5F67AA5F3281}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4547957-8DA8-4DD1-BBA6-7916F7946A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72B9C00-9562-4652-B912-D87D19A8934D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72B9C00-9562-4652-B912-D87D19A8934D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72B9C00-9562-4652-B912-D87D19A8934D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72B9C00-9562-4652-B912-D87D19A8934D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
