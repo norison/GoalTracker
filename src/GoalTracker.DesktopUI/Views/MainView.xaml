@@ -29,7 +29,7 @@
                                          CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}" />
         </b:EventTrigger>
     </b:Interaction.Triggers>
-    
+
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="30" />
     </WindowChrome.WindowChrome>
@@ -39,69 +39,77 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
-        <StackPanel Grid.Row="0"
-                    WindowChrome.IsHitTestVisibleInChrome="True"
-                    Margin="0 0 5 0"
-                    Height="30"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Top">
-            
-            <ToggleButton
-                Style="{StaticResource MaterialDesignSwitchToggleButton}"
-                Width="40"
-                Margin="0 0 15 0"
-                IsChecked="{Binding IsDarkTheme}">
-                <materialDesign:PackIcon
-                    Kind="ThemeLightDark"
-                    RenderTransformOrigin=".5,.5">
-                    <materialDesign:PackIcon.RenderTransform>
-                        <RotateTransform
-                            Angle="-135" />
-                    </materialDesign:PackIcon.RenderTransform>
-                </materialDesign:PackIcon>
-                <materialDesign:ToggleButtonAssist.OnContent>
+
+        <Grid Grid.Row="0">
+            <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Height="30"
+                       Margin="5"
+                       Text="Goal Tracker" />
+
+            <StackPanel WindowChrome.IsHitTestVisibleInChrome="True"
+                        Margin="0 0 5 0"
+                        Height="30"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top">
+
+                <ToggleButton
+                    Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                    Width="40"
+                    Margin="0 0 15 0"
+                    IsChecked="{Binding IsDarkTheme}">
                     <materialDesign:PackIcon
                         Kind="ThemeLightDark"
                         RenderTransformOrigin=".5,.5">
                         <materialDesign:PackIcon.RenderTransform>
                             <RotateTransform
-                                Angle="45" />
+                                Angle="-135" />
                         </materialDesign:PackIcon.RenderTransform>
                     </materialDesign:PackIcon>
-                </materialDesign:ToggleButtonAssist.OnContent>
-            </ToggleButton>
-            
-            <Button Style="{DynamicResource MaterialDesignFlatButton}"
-                    Padding="0"
-                    Width="30"
-                    Height="20"
-                    Command="{Binding MinimizeCommand}"
-                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}">
-                <materialDesign:PackIcon Kind="Minus" />
-            </Button>
-            
-            <Button Style="{DynamicResource MaterialDesignFlatButton}"
-                    Padding="0"
-                    Width="30"
-                    Height="20"
-                    Command="{Binding MaximizeCommand}"
-                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}">
-                <materialDesign:PackIcon Kind="WindowRestore" />
-            </Button>
-            
-            <Button Style="{DynamicResource MaterialDesignFlatButton}"
-                    Padding="0"
-                    Width="30"
-                    Height="20"
-                    Command="{Binding CloseCommand}"
-                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}">
-                <materialDesign:PackIcon Kind="WindowClose" />
-            </Button>
-        </StackPanel>
-        
-        <ContentControl Grid.Row="1" regions:RegionManager.RegionName="{x:Static constants:RegionNames.MainRegion}"/>
+                    <materialDesign:ToggleButtonAssist.OnContent>
+                        <materialDesign:PackIcon
+                            Kind="ThemeLightDark"
+                            RenderTransformOrigin=".5,.5">
+                            <materialDesign:PackIcon.RenderTransform>
+                                <RotateTransform
+                                    Angle="45" />
+                            </materialDesign:PackIcon.RenderTransform>
+                        </materialDesign:PackIcon>
+                    </materialDesign:ToggleButtonAssist.OnContent>
+                </ToggleButton>
+
+                <Button Style="{DynamicResource MaterialDesignFlatButton}"
+                        Padding="0"
+                        Width="30"
+                        Height="20"
+                        Command="{Binding MinimizeCommand}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}">
+                    <materialDesign:PackIcon Kind="Minus" />
+                </Button>
+
+                <Button Style="{DynamicResource MaterialDesignFlatButton}"
+                        Padding="0"
+                        Width="30"
+                        Height="20"
+                        Command="{Binding MaximizeCommand}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}">
+                    <materialDesign:PackIcon Kind="WindowRestore" />
+                </Button>
+
+                <Button Style="{DynamicResource MaterialDesignFlatButton}"
+                        Padding="0"
+                        Width="30"
+                        Height="20"
+                        Command="{Binding CloseCommand}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window, Mode=FindAncestor}}">
+                    <materialDesign:PackIcon Kind="WindowClose" />
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <ContentControl Grid.Row="1" regions:RegionManager.RegionName="{x:Static constants:RegionNames.MainRegion}" />
     </Grid>
 
 </Window>

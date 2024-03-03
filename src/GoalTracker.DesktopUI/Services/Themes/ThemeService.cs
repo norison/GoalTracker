@@ -7,7 +7,7 @@ namespace GoalTracker.DesktopUI.Services.Themes;
 public class ThemeService : IThemeService
 {
     private readonly PaletteHelper _paletteHelper = new();
-    private ETheme _theme = ETheme.Light;
+    private ETheme _theme = ETheme.Dark;
 
     public ETheme GetTheme()
     {

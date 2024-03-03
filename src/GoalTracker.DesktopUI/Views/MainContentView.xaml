@@ -3,9 +3,78 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:constants="clr-namespace:GoalTracker.DesktopUI.Constants"
+             xmlns:regions="http://prismlibrary.com/"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
+
     <Grid>
-        <TextBlock Text="Hello"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <RadioButton Style="{StaticResource MaterialDesignTabRadioButtonRight}"
+                         BorderBrush="{DynamicResource PrimaryHueMidBrush}"
+                         IsChecked="True"
+                         Command="{Binding NavigateCommand}"
+                         CommandParameter="{x:Static constants:PageNames.Dashboard}"
+                         Cursor="Hand">
+                <StackPanel>
+                    <materialDesign:PackIcon Width="24"
+                                             Height="24"
+                                             Margin="5"
+                                             HorizontalAlignment="Center"
+                                             Kind="ViewDashboardOutline" />
+
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Text="Dashboard" />
+                </StackPanel>
+            </RadioButton>
+
+            <RadioButton Style="{StaticResource MaterialDesignTabRadioButtonRight}"
+                         BorderBrush="{DynamicResource PrimaryHueMidBrush}"
+                         Command="{Binding NavigateCommand}"
+                         CommandParameter="{x:Static constants:PageNames.Goals}"
+                         Cursor="Hand">
+                <StackPanel>
+                    <materialDesign:PackIcon Width="24"
+                                             Height="24"
+                                             Margin="5"
+                                             HorizontalAlignment="Center"
+                                             Kind="BullseyeArrow" />
+
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Text="Goals" />
+                </StackPanel>
+            </RadioButton>
+
+            <RadioButton Style="{StaticResource MaterialDesignTabRadioButtonRight}"
+                         BorderBrush="{DynamicResource PrimaryHueMidBrush}"
+                         Command="{Binding NavigateCommand}"
+                         CommandParameter="{x:Static constants:PageNames.Tracker}"
+                         Cursor="Hand">
+                <StackPanel>
+                    <materialDesign:PackIcon Width="24"
+                                             Height="24"
+                                             Margin="5"
+                                             HorizontalAlignment="Center"
+                                             Kind="FormatListBulleted" />
+
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Text="Tracker" />
+                </StackPanel>
+            </RadioButton>
+        </StackPanel>
+
+        <ContentControl Grid.Column="1"
+                        Margin="15"
+                        regions:RegionManager.RegionName="{x:Static constants:RegionNames.MainContentRegion}" />
     </Grid>
+
 </UserControl>
